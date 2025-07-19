@@ -102,3 +102,106 @@
     font-size: 12px;
   }
 }
+
+/* === Tic Tac Toe Game Minimalist Styles === */
+.ttt-root {
+  min-height: 100vh;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ttt-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  padding: 2.5rem 2rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+}
+
+.ttt-status {
+  margin-bottom: 1.25rem;
+  font-size: 1.25rem;
+  letter-spacing: 0.04em;
+}
+
+.ttt-board {
+  display: grid;
+  grid-template-columns: repeat(3, 60px);
+  grid-template-rows: repeat(3, 60px);
+  gap: 0.6rem;
+  margin-bottom: 1.5rem;
+}
+
+.ttt-square {
+  width: 60px;
+  height: 60px;
+  background: #f8f9fa;
+  border: 2.5px solid #e9ecef;
+  border-radius: 12px;
+  font-size: 2rem;
+  font-family: inherit;
+  color: #282c34;
+  cursor: pointer;
+  outline: none;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.15s, border 0.15s, color 0.13s;
+  font-weight: 400;
+}
+.ttt-square:hover,
+.ttt-square:focus {
+  background: #fffbe7;
+  border: 2.5px solid #FFC107;
+}
+.ttt-win-square {
+  border: 2.5px solid #FFC107 !important;
+  background: #fffbe7 !important;
+  font-weight: 600;
+}
+.ttt-reset-btn {
+  background: #2196F3;
+  color: #fff;
+  border: none;
+  padding: 0.65rem 2.3rem;
+  border-radius: 10px;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  transition: background 0.16s;
+}
+.ttt-reset-btn:hover,
+.ttt-reset-btn:focus {
+  background: #1565c0;
+}
+
+@media (max-width: 500px) {
+  .ttt-card {
+    border-radius: 8px;
+    padding: 1rem 0.5rem 1.33rem 0.5rem;
+    min-width: unset;
+    max-width: 96vw;
+  }
+  .ttt-board {
+    gap: 0.34rem;
+    grid-template-columns: repeat(3, 42px);
+    grid-template-rows: repeat(3, 42px);
+  }
+  .ttt-square {
+    width: 42px;
+    height: 42px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+  }
+  .ttt-status {
+    font-size: 1.05rem;
+  }
+}

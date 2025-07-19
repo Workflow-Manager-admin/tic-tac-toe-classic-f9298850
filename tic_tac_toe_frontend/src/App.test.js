@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
+test('renders tic tac toe game status (Turn/X/O/Draw)', () => {
   render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+  const statusElement = screen.getByText(/Turn:|wins|Draw/i);
+  expect(statusElement).toBeInTheDocument();
 });
